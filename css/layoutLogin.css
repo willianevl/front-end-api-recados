@@ -1,0 +1,147 @@
+.menu {
+    background-color: #9147FF;
+    height: 70px;
+    margin: 0;
+    color: #fff;
+    display: flex;
+}
+
+main h1 {
+    padding: 10px;
+}
+
+.logout {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: #9147FF;
+    color: #fff;
+    position: absolute;
+    margin: 0;
+    right: 15px;
+    top: 10px;
+}
+
+.home {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    transition: 1s;
+}
+
+.logout {
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+    transition: 1s;
+}
+
+.home:hover, .logout:hover {
+    color: rgba(0, 0, 0, .8);
+    transition: 1s;
+}
+
+.col {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.input{
+    max-width: 400px;
+    border: solid 1px #ccc;
+    padding: 10px;
+    font-size: 15px;
+}
+
+
+.input:hover {
+    border-color: #9147FF;
+    transition: 1s;
+}
+
+.tamInput1 {
+    width: 500px;
+    margin: 10px;
+}
+
+.tamInput2 {
+    width: 500px;
+    margin: 10px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#descricao{
+    max-width: 400px;
+    border: solid 1px #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+#descricao:hover{
+    border-color: #9147FF;
+    transition: 1s;
+}
+
+.btn {
+    background-color: #9147FF;
+    color: white;
+    border: 1px solid #5b28a8;
+}
+
+.btn:hover {
+    background-color: #5b28a8;
+    color: white;
+    transition: 1s;
+}
+
+.btn {
+    background-color: #9147FF;
+    color: white;
+    border: 1px solid #5b28a8;
+}
+
+
+
+.btn-red {
+    background-color: rgb(207, 29, 29);
+    border: none;
+    padding: 5px 20px;
+    border-radius: 4px;
+    color: white;
+}
+
+.btn-red:hover {
+    background-color: rgb(177, 39, 39);
+    transition: 1s;
+}
+
+.btn-azul {
+    background-color: rgb(65, 65, 173);
+    border: none;
+    padding: 5px 20px;
+    border-radius: 4px;
+    color: white;
+}
+
+.btn-azul:hover{
+    background-color: rgb(58, 58, 145);
+    transition: 1s;
+}
+
+
+.input-red {
+    color: rgb(218, 31, 31);
+    border-color: rgb(218, 31, 31);
+}

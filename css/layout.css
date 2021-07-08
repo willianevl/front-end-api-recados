@@ -1,0 +1,94 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+header img {
+    height: 100vh;
+}
+
+header h1{
+    font-size: 40px;
+    margin: 10px;
+}
+
+body .tamJanela {
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group {
+    margin: 10px;
+    position: relative;
+}
+
+.form-group i {
+    color: #ccc;
+    position: absolute;
+    right: 25px;
+    bottom: 10px;
+}
+
+.form-group .iconCreateAcc {
+    color: #ccc;
+    position: absolute;
+    right: 10px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.h1Cinza {
+    font-size: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #ccc;
+}
+
+.input{
+    max-width: 400px;
+    border: solid 1px #ccc;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.input:hover {
+    border-color: #9147FF;
+    transition: 1s;
+}
+
+.btn {
+    background-color: #9147FF;
+    color: white;
+    border: 1px solid #5b28a8;
+}
+
+.btn:hover {
+    background-color: #5b28a8;
+    color: white;
+    transition: 1s;
+}
+
+a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+a:hover {
+    color: #b687fc;
+    transition: 1s;
+}
+
+.input-red {
+    color: rgb(218, 31, 31);
+    border-color: rgb(218, 31, 31);
+}

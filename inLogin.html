@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/layoutLogin.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <section class="menu">
+                <div class="home pointer" id="homePage">Home</div>
+                <div>
+                    <div class="logout">
+                        <i class="material-icons pointer" onclick="Logout()">exit_to_app</i>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <h1>My notes</h1>
+            <div class="flex">
+                <input type="text" class="tamInput1 form-control  input" name="title" id="title" placeholder="Title">
+            <div class="input-group tamInput2">
+                <input type="text" id="description" class="form-control input" placeholder="Description">
+                <button  class="btn" onclick="CreateNewNote()">Add Note</button>
+            </div>
+        </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="col-md-1">#</th>
+                <th class="col-md-4">Title</th>
+                <th class="col-md-5">Description</th>
+                <th class="col-md-2">Action</th>
+            </tr>
+        </thead>
+        <tbody id='tableBody'></tbody>
+    </table>
+    </main>
+
+
+    <div class="modal fade" id="CreateNoteFail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+       <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Dados inválidos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p id="errorCreateNote"></p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn" data-bs-dismiss="modal">Fechar</button>
+        </div>
+        </div>
+        </div>
+    </div> 
+
+    <div class="modal fade" id="editNoteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">EDITE O RECADO</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <label for="editedDescription"><strong>Title:</strong></label>
+            <div>
+                <input class="input" type="text" name="editedTitle" id="editedTitle">
+            </div>
+            <label for="editedDescription"><strong>Description:</strong></label>
+            <div>
+                <input  class="input" type="text" name="editedDescription" id="editedDescription">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn" data-bs-dismiss="modal" onclick="SaveChanges()">Save</button>
+            <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ATTNoteFail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+       <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Dados inválidos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p id="editError"></p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" id="abrirModalNovamente" class="btn" data-bs-dismiss="modal">OK</button>
+            <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="confirmDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+       <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">DELETE NOTE</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p><strong id="deleteText"></strong></p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" onclick="confirmDelete()" class="btn" data-bs-dismiss="modal">Yes</button>
+            <button type="button" class="btn" data-bs-dismiss="modal">No</button>
+        </div>
+        </div>
+        </div>
+    </div> 
+
+    <script src="./js/listOfNotes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
