@@ -34,13 +34,13 @@ function login(){
     console.log(user);
 
 
-    // if (!user){
-    //     modalLoginFailbyUserName();
-    // }
+    if (!user){
+        modalLoginFailbyUserName();
+    }
 
-    // if(user.password !== password){
-    //     modalLoginFailbyPassword();
-    // }
+    if(user.password !== password){
+        modalLoginFailbyPassword();
+    }
 
     // if(user.userName === userName && user.password === password){
     //     AbrirURL('inLogin.html'); 
