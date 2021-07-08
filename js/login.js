@@ -42,9 +42,9 @@ function login(){
         modalLoginFailbyPassword();
     }
 
-    // if(user.userName === userName && user.password === password){
-    //     AbrirURL('inLogin.html'); 
-    // }
+    if(user.userName === userName && user.password === password){
+        AbrirURL('inLogin.html'); 
+    }
 
     const UserInf = JSON.stringify(user.id)
     localStorage.setItem('UserInf', UserInf)
