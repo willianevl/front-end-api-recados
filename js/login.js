@@ -30,19 +30,24 @@ function login(){
     const password = document.getElementById('password').value;
 
     const user = listOfUsers.find((f) => f.userName === userName);
-    if (!user){
-        modalLoginFailbyUserName();
-    } 
-    if(user.password !== password){
-        modalLoginFailbyPassword();
-    }
 
-    if(user.userName === userName && user.password === password){
-        AbrirURL('inlogin.html'); 
-    }
+    console.log(user);
 
-    const UserInf = JSON.stringify(user.id)
-    localStorage.setItem('UserInf', UserInf)
+    
+    // if (!user){
+    //     modalLoginFailbyUserName();
+    // }
+
+    // if(user.password !== password){
+    //     modalLoginFailbyPassword();
+    // }
+
+    // if(user.userName === userName && user.password === password){
+    //     AbrirURL('inLogin.html'); 
+    // }
+
+    // const UserInf = JSON.stringify(user.id)
+    // localStorage.setItem('UserInf', UserInf)
 }
 
 function modalLoginFailbyUserName(){
