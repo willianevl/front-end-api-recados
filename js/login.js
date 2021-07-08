@@ -1,7 +1,7 @@
 const listOfUsers = [];
 
-window.addEventListener('load', () => {
-    axios.get("https://backend-api-recados-growdev.herokuapp.com/users").then((response) => {
+window.addEventListener('load', async () => {
+    await axios.get("https://backend-api-recados-growdev.herokuapp.com/users").then((response) => {
         response.data.data.forEach((user) => {
             listOfUsers.push(user);
         });
@@ -23,10 +23,6 @@ if(input.type === 'password'){
     input.type = 'password';
     icon.innerHTML = 'visibility_off';
 }
-}
-
-function AbrirURL(href){
-    return window.location.href = `${href}`
 }
 
 function login(){
