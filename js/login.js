@@ -33,7 +33,7 @@ function login(){
 
     console.log(user);
 
-    
+
     // if (!user){
     //     modalLoginFailbyUserName();
     // }
@@ -46,8 +46,8 @@ function login(){
     //     AbrirURL('inLogin.html'); 
     // }
 
-    // const UserInf = JSON.stringify(user.id)
-    // localStorage.setItem('UserInf', UserInf)
+    const UserInf = JSON.stringify(user.id)
+    localStorage.setItem('UserInf', UserInf)
 }
 
 function modalLoginFailbyUserName(){
