@@ -38,7 +38,7 @@ function login(){
     }
 
     if(user.userName === userName && user.password === password){
-        AbrirURL('inLogin.html');
+        AbrirURL('inlogin.html'); 
     }
 
     const UserInf = JSON.stringify(user.id)
